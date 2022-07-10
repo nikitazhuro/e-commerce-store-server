@@ -14,7 +14,7 @@ const server = new ApolloServer({
 const app = express();
 
 const corsOptions = {
-  origin: 'https://e-commerce-store-client.herokuapp.com',
+  origin: 'https://e-commerce-store-client.web.app',
   credentials: true
 }
 app.use(cors(corsOptions));
