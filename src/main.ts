@@ -19,11 +19,11 @@ const corsOptions = {
 }
 app.use(cors(corsOptions));
 
-server.applyMiddleware({
-  app,
-  path: '/',
-  cors: false,
-})
-
-
-app.listen(PORT);
+server.start().then(res => {
+  server.applyMiddleware({
+    app,
+    path: '/',
+    cors: false,
+  })
+  app.listen(PORT); 
+});
