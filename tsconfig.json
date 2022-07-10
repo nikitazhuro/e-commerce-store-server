@@ -5,6 +5,7 @@
       "allowJs": true,
       "target": "es5",
       "noImplicitAny": true,
-      "esModuleInterop": true
+      "esModuleInterop": true,
+      "skipLibCheck": true
     }
 }
