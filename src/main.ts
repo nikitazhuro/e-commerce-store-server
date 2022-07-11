@@ -13,13 +13,16 @@ const server = new ApolloServer({
 });
 const app = express();
 
+const deployUrl = 'https://e-commerce-store-client.web.app';
+const localUrl = 'http://localhost:8080'
+
 const corsOptions = {
-  origin: 'https://e-commerce-store-client.web.app',
+  origin: localUrl,
   credentials: true
 }
 app.use(cors(corsOptions));
 
-server.start().then(res => {
+server.start().then(() => {
   server.applyMiddleware({
     app,
     path: '/',
